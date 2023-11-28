@@ -302,9 +302,9 @@ public:
 	{ return viewing; }
     void setCanvas(QtCanvas* v);
 
-    const QMatrix &worldMatrix() const;
-    const QMatrix &inverseWorldMatrix() const;
-    bool setWorldMatrix(const QMatrix &);
+    const QMatrix4x4 &worldMatrix() const;
+    const QMatrix4x4 &inverseWorldMatrix() const;
+    bool setWorldMatrix(const QMatrix4x4 &);
 
     virtual QSize sizeHint() const;
 

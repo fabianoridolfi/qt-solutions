@@ -3,8 +3,9 @@
 
 #include "mainwindow.h"
 #include "qtvariantproperty.h"
+
 #include "qttreepropertybrowser.h"
-#include <QMatrix>
+#include <QMatrix4x4>
 #include <QMouseEvent>
 #include <QMenuBar>
 #include <QMenu>

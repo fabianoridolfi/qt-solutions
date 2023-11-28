@@ -12,7 +12,7 @@
 #include <QBoxLayout>
 #include <QTreeWidget>
 #include <QAction>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QTextDocument>
 #include <QCalendarWidget>
 #include <QTimeLine>
@@ -103,7 +103,8 @@ void MyController::createAndControl()
         r.setSize(newWidget->sizeHint());
         r.setWidth(qMax(r.width(), 150));
         r.setHeight(qMax(r.height(), 50));
-        r.moveCenter(QApplication::desktop()->geometry().center());
+        // r.moveCenter(QApplication::desktop()->geometry().center());
+        r.moveCenter(QWidget::screen()->geometry().center());
         newWidget->setGeometry(r);
         newWidget->setWindowTitle(tr("Controlled Object: %1").arg(className));
         newWidget->show();

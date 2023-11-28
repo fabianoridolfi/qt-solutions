@@ -4,12 +4,13 @@
 #include "qtcanvas.h"
 #include <QApplication>
 #include <QBitmap>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QImage>
 #include <QPainter>
 #include <QTimer>
 #include <qhash.h>
 #include <qset.h>
+#include <QMatrix4x4>
 #include <qalgorithms.h>
 #include <qevent.h>
 #include <qpainterpath.h>
@@ -31,8 +32,8 @@ public:
 class QtCanvasViewData {
 public:
     QtCanvasViewData() {}
-    QMatrix xform;
-    QMatrix ixform;
+    QMatrix4x4 xform;
+    QMatrix4x4 ixform;
     bool highQuality;
 };
 
@@ -259,7 +260,7 @@ public:
 
     void sort()
     {
-        qSort(m_list.begin(), m_list.end(), QtCanvasItemLess());
+        std::sort(m_list.begin(), m_list.end(), QtCanvasItemLess());
     }
 
     const QtCanvasItemList &list() const
@@ -581,7 +582,7 @@ QtCanvasChunk& QtCanvas::chunkContaining(int x, int y) const
 */
 QtCanvasItemList QtCanvas::allItems()
 {
-    return d->itemDict.toList();
+    return d->itemDict.values();
 }
 
 
@@ -929,12 +930,12 @@ void QtCanvas::advance()
 */
 void QtCanvas::drawViewArea(QtCanvasView* view, QPainter* p, const QRect& vr, bool)
 {
-    QMatrix wm = view->worldMatrix();
-    QMatrix iwm = wm.inverted();
+    QMatrix4x4 wm = view->worldMatrix();
+    QMatrix4x4 iwm = wm.inverted();
     // ivr = covers all chunks in vr
     QRect ivr = iwm.mapRect(vr);
 
-    p->setMatrix(wm);
+    p->setWorldTransform(wm.toTransform());
     drawCanvasArea(ivr, p, false);
 }
 
@@ -1115,7 +1116,7 @@ void QtCanvas::drawCanvasArea(const QRect& inarea, QPainter* p, bool /*double_bu
             }
         }
     }
-    qSort(allvisible.begin(), allvisible.end(), QtCanvasItemLess());
+    std::sort(allvisible.begin(), allvisible.end(), QtCanvasItemLess());
 
     drawBackground(*p, area);
     if (!allvisible.isEmpty()) {
@@ -2313,7 +2314,7 @@ QtCanvasItemList QtCanvas::collisions(const QRect& r) const
     i.setPen(NoPen);
     i.show(); // doesn't actually show, since we destroy it
     QtCanvasItemList l = i.collisions(true);
-    qSort(l.begin(), l.end(), QtCanvasItemLess());
+    std::sort(l.begin(), l.end(), QtCanvasItemLess());
     return l;
 }
 
@@ -2713,7 +2714,7 @@ bool QtCanvasPixmapArray::readPixmaps(const QString& datafilenamepattern,
         framecount = 1;
     for (int i = 0; i < framecount; i++) {
         QString r;
-        r.sprintf("%04d", i);
+        r.asprintf("%04d", i);
         if (maskonly) {
             if (!img[i]->collision_mask)
                 img[i]->collision_mask = new QImage();
@@ -3053,7 +3054,7 @@ void QtCanvasSprite::draw(QPainter& painter)
     For example:
 
     \code
-    QMatrix wm;
+    QMatrix4x4 wm;
     wm.scale(2, 2);   // Zooms in by 2 times
     wm.rotate(90);    // Rotates 90 degrees counter clockwise
                         // around the origin.
@@ -3079,7 +3080,7 @@ void QtCanvasSprite::draw(QPainter& painter)
     QRect canvasRect = myCanvasView->inverseWorldMatrix().mapRect(rc);
     \endcode
 
-    \sa QMatrix QPainter::setWorldMatrix()
+    \sa QMatrix4x4 QPainter::setWorldMatrix()
 
 */
 
@@ -3279,7 +3280,7 @@ void QtCanvasView::setCanvas(QtCanvas* canvas)
 
     \sa setWorldMatrix() inverseWorldMatrix()
 */
-const QMatrix &QtCanvasView::worldMatrix() const
+const QMatrix4x4 &QtCanvasView::worldMatrix() const
 {
     return d->xform;
 }
@@ -3290,7 +3291,7 @@ const QMatrix &QtCanvasView::worldMatrix() const
 
     \sa setWorldMatrix() worldMatrix()
 */
-const QMatrix &QtCanvasView::inverseWorldMatrix() const
+const QMatrix4x4 &QtCanvasView::inverseWorldMatrix() const
 {
     return d->ixform;
 }
@@ -3306,11 +3307,12 @@ const QMatrix &QtCanvasView::inverseWorldMatrix() const
 
     Returns false if \a wm is not invertable; otherwise returns true.
 
-    \sa worldMatrix() inverseWorldMatrix() QMatrix::isInvertible()
+    \sa worldMatrix() inverseWorldMatrix() QMatrix4x4::isInvertible()
 */
-bool QtCanvasView::setWorldMatrix(const QMatrix & wm)
+bool QtCanvasView::setWorldMatrix(const QMatrix4x4 & wm)
 {
-    bool ok = wm.isInvertible();
+    // bool ok = wm.isInvertible();
+    bool ok = wm.toTransform().isInvertible();
     if (ok) {
         d->xform = wm;
         d->ixform = wm.inverted();
@@ -3343,7 +3345,7 @@ void QtCanvasView::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
         return;
     QPainterPath clipPath;
     clipPath.addRect(viewing->rect());
-    p->setClipPath(d->xform.map(clipPath), Qt::IntersectClip);
+    p->setClipPath(d->xform.toTransform().map(clipPath), Qt::IntersectClip);
     viewing->drawViewArea(this, p, QRect(cx, cy, cw, ch), false);
 }
 
@@ -3356,7 +3358,7 @@ QSize QtCanvasView::sizeHint() const
         return QScrollArea::sizeHint();
     // should maybe take transformations into account
     return (canvas()->size() + 2 * QSize(frameWidth(), frameWidth()))
-           .boundedTo(3 * QApplication::desktop()->size() / 4);
+        .boundedTo(3 * QWidget::screen()->size() / 4);
 }
 
 /*
