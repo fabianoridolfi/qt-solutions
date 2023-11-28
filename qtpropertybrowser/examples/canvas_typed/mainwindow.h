@@ -54,8 +54,8 @@ private slots:
     void valueChanged(QtProperty *property, const QFont &value);
     void valueChanged(QtProperty *property, const QPoint &value);
     void valueChanged(QtProperty *property, const QSize &value);
-private:
 
+private:
     QtCanvasItem *addRectangle();
     QtCanvasItem *addEllipse();
     QtCanvasItem *addLine();
