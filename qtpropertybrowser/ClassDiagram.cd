@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QtButtonPropertyBrowser" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAQACAAAACAIAAAAAAAAAEACE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtbuttonpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSpinBoxFactory" Collapsed="true">
+    <Position X="21.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABBgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSliderFactory" Collapsed="true">
+    <Position X="25.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAARAAAAAAAABAAAAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtScrollBarFactory" Collapsed="true">
+    <Position X="30.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAQAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCheckBoxFactory" Collapsed="true">
+    <Position X="34.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAIAAAABgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDoubleSpinBoxFactory" Collapsed="true">
+    <Position X="39.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAgAAAAAIAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtLineEditFactory" Collapsed="true">
+    <Position X="41.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAIAAEAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateEditFactory" Collapsed="true">
+    <Position X="43.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAABAAAAAAAAAAACAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTimeEditFactory" Collapsed="true">
+    <Position X="46" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAAkAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateTimeEditFactory" Collapsed="true">
+    <Position X="48.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAgIAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtKeySequenceEditorFactory" Collapsed="true">
+    <Position X="50.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAQAABAAAAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCharEditorFactory" Collapsed="true">
+    <Position X="16.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAABAAQAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtEnumEditorFactory" Collapsed="true">
+    <Position X="23.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAiAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCursorEditorFactory" Collapsed="true">
+    <Position X="28" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAQAAAAAEAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtColorEditorFactory" Collapsed="true">
+    <Position X="32.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAABAAAAAAAABAAAAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFontEditorFactory" Collapsed="true">
+    <Position X="37" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAABAAAAAAAAAAAAAAAAgAQAACE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtGroupBoxPropertyBrowser" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAASAAAQACAAAAAAAAAAgAAAAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtgroupboxpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLineEdit">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="QLineEdit::EchoMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\Qt\6.6.0\msvc2019_64\include\QtWidgets\qlineedit.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CvjIgACOE1NJAoEQFEEk4ABmYChQBrYcAQKA6OGIoAU=</HashCode>
+      <FileName>C:\Qt\6.6.0\msvc2019_64\include\QtWidgets\qlineedit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtProperty" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAQEEAQEAAQAACAAggAAiggAgAIQAIAAAgAAAhCE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractPropertyManager" Collapsed="true">
+    <Position X="42.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAEAAQCAAAAAAIAgAAQAAAoAAIIAAAEAIAAQBCA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractEditorFactoryBase">
+    <Position X="30" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAQACAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractEditorFactory&lt;PropertyManager&gt;">
+    <Position X="33.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAABAAAAgAgAAiAQAAAAgAQAhAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtBrowserItem" Collapsed="true">
+    <Position X="79" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAARAAAAAAAAAAAAAAAQAEAAAAAAAACE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractPropertyBrowser" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEYAEEAAAAAAAAEACAgAQEjAAAAAAQAAAAAAAAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCursorDatabase" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAABABAAIAIAAAAgIAaAAAAAAEAAAAAAAAAAgAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowserutils_p.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPropertyBrowserUtils" Collapsed="true">
+    <Position X="79" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAhAAEACAAAAAAAgAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowserutils_p.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtBoolEdit" Collapsed="true">
+    <Position X="75.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAQFIAAAAAAMBASAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowserutils_p.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtKeySequenceEdit" Collapsed="true">
+    <Position X="79" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQAAEAAAAAAIAQBAAAIAAQAAAwAAIAAACAAAIAAQA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowserutils_p.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtGroupPropertyManager" Collapsed="true">
+    <Position X="44" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAIACAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtIntPropertyManager" Collapsed="true">
+    <Position X="50.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAIEAQACAoAAAAAAAAgAAYAAAACAYAACAKAAFACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtBoolPropertyManager" Collapsed="true">
+    <Position X="55.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAACAAAAAEAAgAAAAABAAACEAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDoublePropertyManager" Collapsed="true">
+    <Position X="59.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAQACAoIAAAAAAAgAAYEBAACAQAACIOAAFACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtStringPropertyManager" Collapsed="true">
+    <Position X="64.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAEAQQCABAAAAABAAABEIAAAACIQAAAAIADAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDatePropertyManager" Collapsed="true">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAAACAoAAAEAAAAAAAAAAAACAAAACAKgABACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTimePropertyManager" Collapsed="true">
+    <Position X="21.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAEAAAAAAAAAAAEAAAACAAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateTimePropertyManager" Collapsed="true">
+    <Position X="26" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAAAAAAAAAgAAAAAACAAAAAAIAAAICA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtKeySequencePropertyManager" Collapsed="true">
+    <Position X="30.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAAAAAAAAAAAAAAAACAAAAABIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCharPropertyManager" Collapsed="true">
+    <Position X="35" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAgAAAAAAAAAAAAAAAACAAAAAAIAAAgCA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtLocalePropertyManager" Collapsed="true">
+    <Position X="39.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAAAAABAAAQAAAAAACACAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPointPropertyManager" Collapsed="true">
+    <Position X="46.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAACQAAAABAAAAAAAAAAAACAAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPointFPropertyManager" Collapsed="true">
+    <Position X="53" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAAAAAAAAAAAAEBAACEIAAAIIAAAgCA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizePropertyManager" Collapsed="true">
+    <Position X="57.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEQAAKAoAAAAAAgAAAAAAAAACAAAACAKAABACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizeFPropertyManager" Collapsed="true">
+    <Position X="62" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIEAAACAoAAAAAgAAAAAAEBAACEAAACIKAABACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtRectPropertyManager" Collapsed="true">
+    <Position X="66.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEUAACAAAgAAAAAAAAAAAAAICAAAAAAJAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtRectFPropertyManager" Collapsed="true">
+    <Position X="19.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAgAEAAAAAAAAEBAICEAAAAYJAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtEnumPropertyManager" Collapsed="true">
+    <Position X="23.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAUACACAABABBAAgAAAAAABAACAAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFlagPropertyManager" Collapsed="true">
+    <Position X="28.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAACAAAAAAAAIAAgAAAAAACAAAgAoIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizePolicyPropertyManager" Collapsed="true">
+    <Position X="32.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAACAAIAAAAAAAAAAAAAAACACAAAAIAEAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFontPropertyManager" Collapsed="true">
+    <Position X="37.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAEQAACAAAAAAAAgAAAAAAAAACACAAAAIAAAgCA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtColorPropertyManager" Collapsed="true">
+    <Position X="41.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABEQIACAAAAAAAAgAAAAAAAAACAAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCursorPropertyManager" Collapsed="true">
+    <Position X="48.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAEAIAAgAAAAAAAAACAAAAAAIAAAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTreePropertyBrowser" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIgAAAgBAUAQAACAJAYACgAAAAIIgGAAAAAACIACE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qttreepropertybrowser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantProperty" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAIAAACAAAAAICIAAAAQAAAAACE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantPropertyManager" Collapsed="true">
+    <Position X="68.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIQFAAAGAAAAAAAAgAgAAAAmAECIAIAAQIEAQBCE=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantEditorFactory" Collapsed="true">
+    <Position X="19" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAABAAAAAABAAAAAAAAAAAAAAAAgAQAACA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtButtonPropertyBrowserPrivate" Collapsed="true">
+    <Position X="82.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQAAAAAAIkAEEAgJAAQACBAAAABIIAAAIAAARgEAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtbuttonpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EditorFactoryPrivate&lt;Editor&gt;">
+    <Position X="33.5" Y="13" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="EditorFactoryPrivate&lt;Editor&gt;::EditorList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="EditorFactoryPrivate&lt;Editor&gt;::PropertyToEditorListMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="EditorFactoryPrivate&lt;Editor&gt;::EditorToPropertyMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAQAAQAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSpinBoxFactoryPrivate" Collapsed="true">
+    <Position X="21.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAACABgQAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSliderFactoryPrivate" Collapsed="true">
+    <Position X="25.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAACABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtScrollBarFactoryPrivate" Collapsed="true">
+    <Position X="30.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAACABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCheckBoxFactoryPrivate" Collapsed="true">
+    <Position X="32.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDoubleSpinBoxFactoryPrivate" Collapsed="true">
+    <Position X="34.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAACARgQAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtLineEditFactoryPrivate" Collapsed="true">
+    <Position X="39.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAABgQAAAAEQAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateEditFactoryPrivate" Collapsed="true">
+    <Position X="41.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTimeEditFactoryPrivate" Collapsed="true">
+    <Position X="46" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateTimeEditFactoryPrivate" Collapsed="true">
+    <Position X="16.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtKeySequenceEditorFactoryPrivate" Collapsed="true">
+    <Position X="19" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCharEdit" Collapsed="true">
+    <Position X="72" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAGAAAAAAIAQBAAAIAAAAAQAACIAAACAAAIAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCharEditorFactoryPrivate" Collapsed="true">
+    <Position X="23.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtEnumEditorFactoryPrivate" Collapsed="true">
+    <Position X="28" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCursorEditorFactoryPrivate" Collapsed="true">
+    <Position X="79" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIBACgAAAACAAAAAAAABAABABAEAAAAAAAAAAQQ=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtColorEditWidget" Collapsed="true">
+    <Position X="75.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAgBAAAAAAAAAAAAAABAAAAAAoAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtColorEditorFactoryPrivate" Collapsed="true">
+    <Position X="37" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFontEditWidget" Collapsed="true">
+    <Position X="82.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAIgAAAAAgBAAAAAAAAAAAAAAAAAAAAAoAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFontEditorFactoryPrivate" Collapsed="true">
+    <Position X="43.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABgAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qteditorfactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtGroupBoxPropertyBrowserPrivate" Collapsed="true">
+    <Position X="73.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAkAAEAgJAAQAABAAAABIIAAAIgAARgEAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtgroupboxpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPropertyPrivate" Collapsed="true">
+    <Position X="72" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAICACAAAAAJAABAAEBAQAAAAAEAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractPropertyManagerPrivate" Collapsed="true">
+    <Position X="73.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAAIAAAAQBAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtBrowserItemPrivate" Collapsed="true">
+    <Position X="80.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAABAAAAABAACAIIIAAAAAAAAAAAI=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtAbstractPropertyBrowserPrivate" Collapsed="true">
+    <Position X="72" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEBBCAAAAMAAQAABUAAAgBBCAAAQAAMABIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtMetaEnumWrapper" Collapsed="true">
+    <Position X="73.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtMetaEnumProvider" Collapsed="true">
+    <Position X="72" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIwAAIAQAAAAAAjAAAAAABAAIAAAAAASAAkEAAAIAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtIntPropertyManagerPrivate" Collapsed="true">
+    <Position X="77.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDoublePropertyManagerPrivate" Collapsed="true">
+    <Position X="73.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtStringPropertyManagerPrivate" Collapsed="true">
+    <Position X="82.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtBoolPropertyManagerPrivate" Collapsed="true">
+    <Position X="77.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAAAAAAAAAAAAACABBAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDatePropertyManagerPrivate" Collapsed="true">
+    <Position X="82.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTimePropertyManagerPrivate">
+    <Position X="72" Y="6.25" Width="2" />
+    <NestedTypes>
+      <Typedef Name="QtTimePropertyManagerPrivate::PropertyValueMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtDateTimePropertyManagerPrivate" Collapsed="true">
+    <Position X="72" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtKeySequencePropertyManagerPrivate" Collapsed="true">
+    <Position X="80.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCharPropertyManagerPrivate" Collapsed="true">
+    <Position X="73.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtLocalePropertyManagerPrivate" Collapsed="true">
+    <Position X="82.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAQAAAAAACABAABAAAAAABAAAAAAAIQ=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPointPropertyManagerPrivate" Collapsed="true">
+    <Position X="77.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAABgAAAAkEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPointFPropertyManagerPrivate" Collapsed="true">
+    <Position X="75.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAACCABAAAAAABgAAAAAEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizePropertyManagerPrivate" Collapsed="true">
+    <Position X="80.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAACABAAAAIAEAAACAkEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizeFPropertyManagerPrivate" Collapsed="true">
+    <Position X="77.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAIACCABAAAAIAEAAACAAEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtRectPropertyManagerPrivate" Collapsed="true">
+    <Position X="75.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAACABAAAAIAFgAAAAkEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtRectFPropertyManagerPrivate" Collapsed="true">
+    <Position X="73.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAgAAAAACCABAAAAIAFgAAAAAEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtEnumPropertyManagerPrivate" Collapsed="true">
+    <Position X="75.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFlagPropertyManagerPrivate" Collapsed="true">
+    <Position X="79" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAIAAgAACABAAAAAAAACAAAAAAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtSizePolicyPropertyManagerPrivate" Collapsed="true">
+    <Position X="79" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAoAEAAAAAAAAACABAABBAEgAAAIAkAAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFontPropertyManagerPrivate" Collapsed="true">
+    <Position X="72" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAADAgAkhAEEIMIAAIBACABACDAACCAAAAAkAAAAoA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtColorPropertyManagerPrivate" Collapsed="true">
+    <Position X="77.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAABJAAgAAAAAkEAAAIA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtCursorPropertyManagerPrivate" Collapsed="true">
+    <Position X="80.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtTreePropertyBrowserPrivate">
+    <Position X="74.25" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BxQAAGCAAQAkAAEAEYCAQMABAEABAIIiAEBAQEQADEA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qttreepropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPropertyEditorView" Collapsed="true">
+    <Position X="82.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIEAAAAAQAAAAAABBABAAABA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qttreepropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtPropertyEditorDelegate" Collapsed="true">
+    <Position X="80.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAICABABEABAEAQMAAACAAAQAEAAAAAAAABYAgBA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qttreepropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtEnumPropertyType" Collapsed="true">
+    <Position X="77.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtFlagPropertyType" Collapsed="true">
+    <Position X="80.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtGroupPropertyType" Collapsed="true">
+    <Position X="75.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantPropertyPrivate">
+    <Position X="82.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAFAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantPropertyManagerPrivate">
+    <Position X="79.5" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQKBAAEAAghAyYAQGIAUQCARAUAAgBARkAVRgABAAgY=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QtVariantEditorFactoryPrivate">
+    <Position X="77" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAFACAAAAAAggAABQAAAgABAACAAAYAAAAhAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="`anonymous-namespace'::CursorDatabase" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertymanager.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="QtIconMap" Collapsed="true">
+    <Position X="69.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Map1" Collapsed="true">
+    <Position X="64.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Map2" Collapsed="true">
+    <Position X="66.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtpropertybrowser.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PropertyMap" Collapsed="true">
+    <Position X="68" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\0xlitf\qt-solutions\qtpropertybrowser\src\qtvariantproperty.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
