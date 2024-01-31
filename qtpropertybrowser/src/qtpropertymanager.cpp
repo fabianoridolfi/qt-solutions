@@ -588,11 +588,13 @@ public:
 
     struct Data
     {
-        Data() : val(0), minVal(-INT_MAX), maxVal(INT_MAX), singleStep(1), readOnly(false) {}
+        Data() : val(0), minVal(-INT_MAX), maxVal(INT_MAX), singleStep(1), base(10), prefix(QString()), readOnly(false) {}
         int val;
         int minVal;
         int maxVal;
         int singleStep;
+        int base;
+        QString prefix;
         bool readOnly;
         int minimumValue() const { return minVal; }
         int maximumValue() const { return maxVal; }
@@ -657,6 +659,27 @@ public:
 */
 
 /*!
+    \fn void QtIntPropertyManager::baseChanged(QtProperty *property, int base)
+
+    This signal is emitted whenever a property created by this manager
+    changes its base property, passing a pointer to the
+    \a property and the new \a base value
+
+    \sa setBase()
+*/
+
+/*!
+    \fn void QtIntPropertyManager::prefixChanged(QtProperty *property, QString prefix)
+
+    This signal is emitted whenever a property created by this manager
+    changes its prefix property, passing a pointer to the
+    \a property and the new \a prefix value
+
+    \sa setPrefix()
+*/
+
+
+/*!
     Creates a manager with the given \a parent.
 */
 QtIntPropertyManager::QtIntPropertyManager(QObject *parent)
@@ -718,6 +741,30 @@ int QtIntPropertyManager::maximum(const QtProperty *property) const
 int QtIntPropertyManager::singleStep(const QtProperty *property) const
 {
     return getData<int>(d_ptr->m_values, &QtIntPropertyManagerPrivate::Data::singleStep, property, 0);
+}
+
+/*!
+    Returns the given \a property's base value.
+
+    The base is use to display a property in the desiderd format.
+
+    \sa setBase()
+*/
+int QtIntPropertyManager::base(const QtProperty *property) const
+{
+    return getData<int>(d_ptr->m_values, &QtIntPropertyManagerPrivate::Data::base, property, 10);
+}
+
+/*!
+    Returns the given \a property's prefix value.
+
+    The prefix is prepended to the start of the displayed value.
+
+    \sa setPrefix()
+*/
+QString QtIntPropertyManager::prefix(const QtProperty *property) const
+{
+    return getData<QString>(d_ptr->m_values, &QtIntPropertyManagerPrivate::Data::prefix, property, QString());
 }
 
 /*!
@@ -850,6 +897,74 @@ void QtIntPropertyManager::setSingleStep(QtProperty *property, int step)
 
     emit singleStepChanged(property, data.singleStep);
 }
+
+/*!
+    Sets the base value for the given \a property to \a base.
+
+    The base is use to display a property in the desiderd format.
+
+    \sa base()
+*/
+void QtIntPropertyManager::setBase(QtProperty *property, int base)
+{
+    const QtIntPropertyManagerPrivate::PropertyValueMap::iterator it = d_ptr->m_values.find(property);
+    if (it == d_ptr->m_values.end())
+        return;
+
+    QtIntPropertyManagerPrivate::Data data = it.value();
+
+    if (base < 0)
+        base = 10;
+
+    if (data.base == base)
+        return;
+
+    data.base = base;
+
+    it.value() = data;
+
+    emit baseChanged(property, data.base);
+}
+
+/*!
+    Sets the prefix value for the given \a property to \a prefix.
+
+    The prefix is prepended to the start of the displayed value.
+
+    \sa base()
+*/
+void QtIntPropertyManager::setPrefix(QtProperty *property, QString prefix)
+{
+    const QtIntPropertyManagerPrivate::PropertyValueMap::iterator it = d_ptr->m_values.find(property);
+    if (it == d_ptr->m_values.end())
+        return;
+
+    QtIntPropertyManagerPrivate::Data data = it.value();
+
+    if (data.prefix == prefix)
+        return;
+
+    data.prefix = prefix;
+
+    it.value() = data;
+
+    emit prefixChanged(property, data.prefix);
+}
+
+/*!
+    Sets the base and prefix values for the given \a property to \a base and \a prefix.
+
+    The base is use to display a property in the desiderd format and the prefix is prepended to the start of the displayed value.
+
+    \sa setBase()
+    \sa setPrefix()
+*/
+void QtIntPropertyManager::setBaseAndPrefix(QtProperty *property, int base, QString prefix)
+{
+    setBase(property, base);
+    setPrefix(property, prefix);
+}
+
 
 /*!
     Sets read-only status of the property.

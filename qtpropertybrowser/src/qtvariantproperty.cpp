@@ -272,6 +272,8 @@ public:
     void slotValueChanged(QtProperty *property, int val);
     void slotRangeChanged(QtProperty *property, int min, int max);
     void slotSingleStepChanged(QtProperty *property, int step);
+    void slotBaseChanged(QtProperty *property, int base);
+    void slotPrefixChanged(QtProperty *property, QString prefix);
     void slotValueChanged(QtProperty *property, double val);
     void slotRangeChanged(QtProperty *property, double min, double max);
     void slotSingleStepChanged(QtProperty *property, double step);
@@ -336,6 +338,8 @@ public:
     const QString m_flagNamesAttribute;
     const QString m_maximumAttribute;
     const QString m_minimumAttribute;
+    const QString m_baseAttribute;
+    const QString m_prefixAttribute;
     const QString m_regExpAttribute;
     const QString m_echoModeAttribute;
     const QString m_readOnlyAttribute;
@@ -351,6 +355,8 @@ QtVariantPropertyManagerPrivate::QtVariantPropertyManagerPrivate() :
     m_flagNamesAttribute(QLatin1String("flagNames")),
     m_maximumAttribute(QLatin1String("maximum")),
     m_minimumAttribute(QLatin1String("minimum")),
+    m_baseAttribute(QLatin1String("base")),
+    m_prefixAttribute(QLatin1String("prefix")),
     m_regExpAttribute(QLatin1String("regExp")),
     m_echoModeAttribute(QLatin1String("echoMode")),
     m_readOnlyAttribute(QLatin1String("readOnly")),
@@ -467,6 +473,18 @@ void QtVariantPropertyManagerPrivate::slotSingleStepChanged(QtProperty *property
 {
     if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
         emit q_ptr->attributeChanged(varProp, m_singleStepAttribute, QVariant(step));
+}
+
+void QtVariantPropertyManagerPrivate::slotBaseChanged(QtProperty *property, int base)
+{
+    if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
+        emit q_ptr->attributeChanged(varProp, m_baseAttribute, QVariant(base));
+}
+
+void QtVariantPropertyManagerPrivate::slotPrefixChanged(QtProperty *property, QString prefix)
+{
+    if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
+        emit q_ptr->attributeChanged(varProp, m_prefixAttribute, QVariant(prefix));
 }
 
 void QtVariantPropertyManagerPrivate::slotValueChanged(QtProperty *property, double val)
@@ -936,6 +954,8 @@ QtVariantPropertyManager::QtVariantPropertyManager(QObject *parent)
     d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_minimumAttribute] = QVariant::Int;
     d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_maximumAttribute] = QVariant::Int;
     d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_singleStepAttribute] = QVariant::Int;
+    d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_baseAttribute] = QVariant::Int;
+    d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_prefixAttribute] = QVariant::String;
     d_ptr->m_typeToAttributeToAttributeType[QVariant::Int][d_ptr->m_readOnlyAttribute] = QVariant::Bool;
     d_ptr->m_typeToValueType[QVariant::Int] = QVariant::Int;
     connect(intPropertyManager, SIGNAL(valueChanged(QtProperty *, int)),
@@ -944,6 +964,11 @@ QtVariantPropertyManager::QtVariantPropertyManager(QObject *parent)
                 this, SLOT(slotRangeChanged(QtProperty *, int, int)));
     connect(intPropertyManager, SIGNAL(singleStepChanged(QtProperty *, int)),
                 this, SLOT(slotSingleStepChanged(QtProperty *, int)));
+    connect(intPropertyManager, SIGNAL(baseChanged(QtProperty *, int)),
+                this, SLOT(slotBaseChanged(QtProperty *, int)));
+    connect(intPropertyManager, SIGNAL(prefixChanged(QtProperty *, QString)),
+                this, SLOT(slotPrefixChanged(QtProperty *, QString)));
+
     // DoublePropertyManager
     QtDoublePropertyManager *doublePropertyManager = new QtDoublePropertyManager(this);
     d_ptr->m_typeToPropertyManager[QVariant::Double] = doublePropertyManager;
@@ -1466,6 +1491,10 @@ QVariant QtVariantPropertyManager::attributeValue(const QtProperty *property, co
             return intManager->minimum(internProp);
         if (attribute == d_ptr->m_singleStepAttribute)
             return intManager->singleStep(internProp);
+        if (attribute == d_ptr->m_baseAttribute)
+            return intManager->base(internProp);
+        if (attribute == d_ptr->m_prefixAttribute)
+            return intManager->prefix(internProp);
         if (attribute == d_ptr->m_readOnlyAttribute)
             return intManager->isReadOnly(internProp);
         return QVariant();
@@ -1721,6 +1750,10 @@ void QtVariantPropertyManager::setAttribute(QtProperty *property,
             intManager->setMinimum(internProp, qVariantValue<int>(value));
         else if (attribute == d_ptr->m_singleStepAttribute)
             intManager->setSingleStep(internProp, qVariantValue<int>(value));
+        else if (attribute == d_ptr->m_baseAttribute)
+            intManager->setBase(internProp, qVariantValue<int>(value));
+        else if (attribute == d_ptr->m_prefixAttribute)
+            intManager->setPrefix(internProp, qVariantValue<QString>(value));
         else if (attribute == d_ptr->m_readOnlyAttribute)
             intManager->setReadOnly(internProp, qVariantValue<bool>(value));
         return;

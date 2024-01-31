@@ -83,6 +83,8 @@ private:
     Q_PRIVATE_SLOT(d_func(), void slotValueChanged(QtProperty *, int))
     Q_PRIVATE_SLOT(d_func(), void slotRangeChanged(QtProperty *, int, int))
     Q_PRIVATE_SLOT(d_func(), void slotSingleStepChanged(QtProperty *, int))
+    Q_PRIVATE_SLOT(d_func(), void slotBaseChanged(QtProperty *, int))
+    Q_PRIVATE_SLOT(d_func(), void slotPrefixChanged(QtProperty *, QString))
     Q_PRIVATE_SLOT(d_func(), void slotValueChanged(QtProperty *, double))
     Q_PRIVATE_SLOT(d_func(), void slotRangeChanged(QtProperty *, double, double))
     Q_PRIVATE_SLOT(d_func(), void slotSingleStepChanged(QtProperty *, double))

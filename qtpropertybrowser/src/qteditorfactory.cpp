@@ -112,6 +112,8 @@ public:
     void slotPropertyChanged(QtProperty *property, int value);
     void slotRangeChanged(QtProperty *property, int min, int max);
     void slotSingleStepChanged(QtProperty *property, int step);
+    void slotBaseChanged(QtProperty *property, int base);
+    void slotPrefixChanged(QtProperty *property, QString prefix);
     void slotReadOnlyChanged(QtProperty *property, bool readOnly);
     void slotSetValue(int value);
 };
@@ -159,6 +161,39 @@ void QtSpinBoxFactoryPrivate::slotSingleStepChanged(QtProperty *property, int st
         QSpinBox *editor = itEditor.next();
         editor->blockSignals(true);
         editor->setSingleStep(step);
+        editor->blockSignals(false);
+    }
+}
+
+void QtSpinBoxFactoryPrivate::slotBaseChanged(QtProperty *property, int base)
+{
+    if (!m_createdEditors.contains(property))
+        return;
+
+//    QtIntPropertyManager *manager = q_ptr->propertyManager(property);
+//    if (!manager)
+//        return;
+
+    QListIterator<QSpinBox *> itEditor(m_createdEditors[property]);
+    while (itEditor.hasNext()) {
+        QSpinBox *editor = itEditor.next();
+        editor->blockSignals(true);
+        editor->setDisplayIntegerBase(base);
+//        editor->setValue(manager->value(property));
+        editor->blockSignals(false);
+    }
+}
+
+void QtSpinBoxFactoryPrivate::slotPrefixChanged(QtProperty *property, QString prefix)
+{
+    if (!m_createdEditors.contains(property))
+        return;
+
+    QListIterator<QSpinBox *> itEditor(m_createdEditors[property]);
+    while (itEditor.hasNext()) {
+        QSpinBox *editor = itEditor.next();
+        editor->blockSignals(true);
+        editor->setPrefix(prefix);
         editor->blockSignals(false);
     }
 }
@@ -239,6 +274,10 @@ void QtSpinBoxFactory::connectPropertyManager(QtIntPropertyManager *manager)
                 this, SLOT(slotRangeChanged(QtProperty *, int, int)));
     connect(manager, SIGNAL(singleStepChanged(QtProperty *, int)),
                 this, SLOT(slotSingleStepChanged(QtProperty *, int)));
+    connect(manager, SIGNAL(baseChanged(QtProperty *, int)),
+                this, SLOT(slotBaseChanged(QtProperty *, int)));
+    connect(manager, SIGNAL(prefixChanged(QtProperty *, int)),
+                this, SLOT(slotPrefixChanged(QtProperty *, int)));
     connect(manager, SIGNAL(readOnlyChanged(QtProperty *, bool)),
                 this, SLOT(slotReadOnlyChanged(QtProperty *, bool)));
 }
@@ -254,6 +293,8 @@ QWidget *QtSpinBoxFactory::createEditor(QtIntPropertyManager *manager, QtPropert
     QSpinBox *editor = d_ptr->createEditor(property, parent);
     editor->setSingleStep(manager->singleStep(property));
     editor->setRange(manager->minimum(property), manager->maximum(property));
+    editor->setDisplayIntegerBase(manager->base(property));
+    editor->setPrefix(manager->prefix(property));
     editor->setValue(manager->value(property));
     editor->setKeyboardTracking(false);
     editor->setReadOnly(manager->isReadOnly(property));
@@ -277,6 +318,10 @@ void QtSpinBoxFactory::disconnectPropertyManager(QtIntPropertyManager *manager)
                 this, SLOT(slotRangeChanged(QtProperty *, int, int)));
     disconnect(manager, SIGNAL(singleStepChanged(QtProperty *, int)),
                 this, SLOT(slotSingleStepChanged(QtProperty *, int)));
+    disconnect(manager, SIGNAL(baseChanged(QtProperty *, int)),
+                this, SLOT(slotBaseChanged(QtProperty *, int)));
+    disconnect(manager, SIGNAL(prefixChanged(QtProperty *, int)),
+                this, SLOT(slotPrefixChanged(QtProperty *, int)));
     disconnect(manager, SIGNAL(readOnlyChanged(QtProperty *, bool)),
                 this, SLOT(slotReadOnlyChanged(QtProperty *, bool)));
 }

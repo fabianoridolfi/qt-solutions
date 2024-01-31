@@ -44,6 +44,8 @@ public:
     int minimum(const QtProperty *property) const;
     int maximum(const QtProperty *property) const;
     int singleStep(const QtProperty *property) const;
+    int base(const QtProperty *property) const;
+    QString prefix(const QtProperty *property) const;
     bool isReadOnly(const QtProperty *property) const;
 
 public Q_SLOTS:
@@ -52,11 +54,16 @@ public Q_SLOTS:
     void setMaximum(QtProperty *property, int maxVal);
     void setRange(QtProperty *property, int minVal, int maxVal);
     void setSingleStep(QtProperty *property, int step);
+    void setBase(QtProperty *property, int base);
+    void setPrefix(QtProperty *property, QString prefix);
+    void setBaseAndPrefix(QtProperty *property, int base, QString prefix);
     void setReadOnly(QtProperty *property, bool readOnly);
 Q_SIGNALS:
     void valueChanged(QtProperty *property, int val);
     void rangeChanged(QtProperty *property, int minVal, int maxVal);
     void singleStepChanged(QtProperty *property, int step);
+    void baseChanged(QtProperty *property, int base);
+    void prefixChanged(QtProperty *property, QString prefix);
     void readOnlyChanged(QtProperty *property, bool readOnly);
 protected:
     QString valueText(const QtProperty *property) const;
