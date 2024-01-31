@@ -1,0 +1,5 @@
+build-qtpropertybrowser-Desktop_Qt_5_12_4_JMobile_MSVC2019_32bit-Debug/
+qtpropertybrowser/qtpropertybrowser.pro.user
+build-qtpropertybrowser-Desktop_Qt_5_12_4_JMobile_MSVC2019_32bit-Release/
+qtpropertybrowser/config.pri
+qtpropertybrowser/lib/
